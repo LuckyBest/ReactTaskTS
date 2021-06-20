@@ -41,7 +41,7 @@ const UserComponent:FC<userComponentProps> = ({ name, photo, id, counter }) => {
       <div className={classes.container}>
       <div
         className={classes.containerInfo}
-        style={counter > 9999 ? { marginLeft: "14%" } : { marginLeft: "10%" }}
+        style={counter > 9999 ? { marginLeft: "13%" } : { marginLeft: "10%" }}
       >
         <img
           src={photo}
