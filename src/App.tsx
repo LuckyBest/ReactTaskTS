@@ -12,14 +12,18 @@ const imageFile =
   "https://th.bing.com/th/id/OIP.xtPHCReBbZoveYWjnesFlwHaHa?pid=ImgDet&rs=1";
 
 const App = () => {
+  
   //Масив користувачів
-  let [listItems, setListItems] = useState<any[]>([]);
+  const [listItems, setListItems] = useState<any[]>([]);
   //Булева перевірка загрузки данних
   const [isFetching, setIsFetching] = useState(false);
-  //Перехід по сторінках
-  let page = 1;
   //Підугрузка потрібної кількості юзерів
   const usersAmount = 50;
+  //Номер юзера
+  let counter = 0;
+  //Перехід по сторінках
+  let page = 1;
+
 
   //додаю івент на глобальну змінну
   useEffect(() => {
@@ -48,11 +52,10 @@ const App = () => {
         .then((response) => {
           page = +1;
           setListItems(():any => {
-          //console.log(listItems);
           return [...listItems, ...response.data.items];
         })
         });
-    }, 300);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -64,8 +67,7 @@ const App = () => {
     fetchData();
     setIsFetching(false);
   };
-  let counter = 0;
-  console.log(listItems);
+
   return (
     <>
       <Header />
