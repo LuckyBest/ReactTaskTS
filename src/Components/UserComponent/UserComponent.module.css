@@ -1,0 +1,222 @@
+/*User bar*/
+.user {
+  width: 50%;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  cursor: pointer;
+}
+
+.activatedUser {
+  width: 50%;
+  height: 100px;
+  border-radius: 20px;
+  margin: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 10px 10px 10px #941414;
+  display: flex;
+  cursor: pointer;
+}
+.user:hover {
+  box-shadow: 12px 12px 12px #0040ff;
+  transform: scale(1.03);
+}
+
+.containerElementIndex {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+.containerElementIndexActivated {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+.containerElementIndex p {
+  margin-left: 40px;
+  margin-bottom: 5px;
+  position: absolute;
+}
+.containerElementIndexActivated p {
+  margin-left: 40px;
+  margin-bottom: 5px;
+  position: absolute;
+  color: #4c5e5e;
+}
+
+/*User info*/
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.containerInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.userInfo {
+  padding-left: 10px;
+}
+.userAvatar {
+  height: 80%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.userAvatarActivated {
+  height: 80%;
+  border-radius: 50%;
+  border: solid 2px #281861;
+}
+.userInfoName p {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.userInfoId {
+  white-space: nowrap;
+  height: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.userInfoIdActivated p {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 18px;
+}
+.userTime {
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+.userTimeActivated {
+  color: #003cb3;
+  font-size: 15px;
+}
+/*Helmet*/
+
+.helmet svg {
+  width: 25px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .user,
+  .activatedUser {
+    height: 70px;
+    width: 60%;
+  }
+
+  .userInfoName p,
+  .userInfoNameActivated p,
+  .userInfoId p,
+  .userInfoIdActivated p {
+    font-size: 15px;
+  }
+
+  .userTime,
+  .userTimeActivated {
+    font-size: 13px;
+  }
+  .containerElementIndex,
+  .containerElementIndexActivated {
+    margin-left: 8px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .userInfoName p,
+  .userInfoNameActivated p,
+  .userInfoId p,
+  .userInfoIdActivated p {
+    font-size: 12px;
+  }
+
+  .userTime,
+  .userTimeActivated {
+    font-size: 10px;
+  }
+  .containerElementIndex,
+  .containerElementIndexActivated {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+
+  .helmet svg {
+    width: 18px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .user {
+    width: 100%;
+  }
+
+  .activatedUser {
+    width: 100%;
+  }
+
+  .userInfoName p,
+  .userInfoNameActivated p,
+  .userInfoId p,
+  .userInfoIdActivated p {
+    font-size: 12px;
+  }
+
+  .userTime,
+  .userTimeActivated {
+    font-size: 7px;
+  }
+  .containerElementIndex,
+  .containerElementIndexActivated {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .helmetBlue svg {
+    width: 12px;
+    margin-right: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .userInfoName p,
+  .userInfoNameActivated p,
+  .userInfoId p,
+  .userInfoIdActivated p {
+    font-size: 12px;
+  }
+
+  .userTime,
+  .userTimeActivated {
+    font-size: 5px;
+  }
+  .containerElementIndex,
+  .containerElementIndexActivated {
+    margin-left: 2px;
+    font-size: 6px;
+  }
+
+  .helmetBlue svg {
+    width: 5px;
+    margin-right: 3px;
+  }
+}
