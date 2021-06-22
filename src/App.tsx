@@ -12,7 +12,7 @@ const imageFile =
   "https://th.bing.com/th/id/OIP.xtPHCReBbZoveYWjnesFlwHaHa?pid=ImgDet&rs=1";
 
 const App = () => {
-  
+
   //Масив користувачів
   const [listItems, setListItems] = useState<any[]>([]);
   //Булева перевірка загрузки данних
@@ -35,7 +35,7 @@ const App = () => {
   const handleScroll = () => {
     if (
       Math.floor(window.innerHeight + document.documentElement.scrollTop) !==
-        document.documentElement.offsetHeight ||
+      document.documentElement.offsetHeight ||
       isFetching
     )
       return;
@@ -47,13 +47,13 @@ const App = () => {
     setTimeout(async () => {
       await axios
         .get(
-          `https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${usersAmount}`
+          `http://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${usersAmount}`
         )
         .then((response) => {
           page = +1;
-          setListItems(():any => {
-          return [...listItems, ...response.data.items];
-        })
+          setListItems((): any => {
+            return [...listItems, ...response.data.items];
+          })
         });
     }, 1000);
   };
